@@ -1,16 +1,6 @@
 import React from "react";
+import type { BoardProps, BoardState } from "../@types/Board";
 import Square from "./Square";
-
-interface BoardProps {
-  squares: Array<string | null>;
-  winnerSquares: Array<number>;
-  onClick: (i: number) => void;
-}
-
-interface BoardState {
-  squares: Array<string>;
-  winnerSquares: Array<number>;
-}
 
 class Board extends React.Component<BoardProps, BoardState> {
   constructor(props: BoardProps) {

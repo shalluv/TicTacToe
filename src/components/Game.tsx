@@ -1,15 +1,6 @@
 import React from "react";
+import type { GameState } from "../@types/Game";
 import Board from "./Board";
-
-interface GameState {
-  history: Array<{
-    squares: Array<string | null>;
-    squareClicked: number;
-  }>;
-  stepNumber: number;
-  xIsNext: boolean;
-  sortHistoryAscending: boolean;
-}
 
 class Game extends React.Component<{}, GameState> {
   constructor(props: never) {
